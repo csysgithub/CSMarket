@@ -296,7 +296,7 @@ def searchmess(request,cate):
         if cate == '代办':
             # category
             if category=='all':
-                category_list=['课设|毕设','生活缴费','代取快递','代上课','代取餐','代创意','代行动','代其他']
+                category_list=['生活缴费','代取快递','代取餐','代创意','代行动','代其他']
             else:
                 category_list = [category]
 
