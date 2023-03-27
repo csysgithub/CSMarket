@@ -18,7 +18,7 @@ class Migration(migrations.Migration):
         ),
         migrations.AlterModelOptions(
             name='news',
-            options={'verbose_name': 'CSM动态', 'verbose_name_plural': '动态/创客素材管理'},
+            options={'verbose_name': 'SCU动态', 'verbose_name_plural': '动态/创客素材管理'},
         ),
         migrations.AlterModelOptions(
             name='words',

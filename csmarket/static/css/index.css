@@ -20,7 +20,7 @@
 .list ul{float: left;}
 .list ul li{padding-left: 10px; padding-right: 5px; cursor: pointer; font-size: 16px;}
 
-#particles{width:100%;height: 500px; background-image: url("/static/img/index_bg.jpg"); background-size: cover; background-position: center;background-attachment: fixed;overflow: hidden}
+#particles{width:100%;height: 500px; background-image: url("/static/img/index_bg.png"); background-size: cover; background-position: center;background-attachment: fixed;overflow: hidden}
 .part_left{width: 60%;height: 500px; padding-left: 8%;padding-top:5%;padding-right: 8%;float: left;}
 .part_logo{height: 80px;}
 .part_logo>img{width: 70px;height: 70px;border-radius: 50%;display: inline-block;}

@@ -11,7 +11,7 @@ def all(request,newcate):
     else:
         user_name=''
     #这里传进来的应该是分类的名字
-    #new_cate=2 代表是CSM动态,  1 代表是创客故事
+    #new_cate=2 代表是SCU动态,  1 代表是创客故事
     cate_id=cate.objects.get(cate_name=newcate).id
     if cate_id==1:
         csmdongtai=False;chuangke=True
