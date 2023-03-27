@@ -65,27 +65,33 @@ def postService(request,cate):
         if uname:
             user = User.objects.get(username=uname)
             # 如果用户已经被认证，且已经审核通过
-            if user and user.user_isValid:
-                cate_list =DCate.objects.all() if cate=="代办" else Cate.objects.all()
-                return render_to_response('post_service.html',{
-                    'user_name': request.COOKIES.get('name'),
-                    'cate': cate,
-                    'cate_list': cate_list,
-                })
-            # 如果未通过审核，提示先去补充个人信息
-            elif not user.user_isValid:
-                request.session['not_auth_error'] = "你还没有进行信息认证，请先去认证信息"
-                try:
-                    referer = request.META['HTTP_REFERER']  # 获取网页访问来源
-                    return render_to_response('prefect.html', {
-                        'not_auth_error': '你还没有通过信息认证，请完善或者修改信息!',
-                        'referer': referer,
-                        'user': User.objects.get(username=request.COOKIES.get('name','')),
-                    })
-                except:
-                    return render_to_response('404.html', {
-                        'error': request.session.get('not_auth_error', default=None)
-                    })
+            # if user and user.user_isValid:
+            #     cate_list =DCate.objects.all() if cate=="代办" else Cate.objects.all()
+            #     return render_to_response('post_service.html',{
+            #         'user_name': request.COOKIES.get('name'),
+            #         'cate': cate,
+            #         'cate_list': cate_list,
+            #     })
+            # # 如果未通过审核，提示先去补充个人信息
+            # elif not user.user_isValid:
+            #     request.session['not_auth_error'] = "你还没有进行信息认证，请先去认证信息"
+            #     try:
+            #         referer = request.META['HTTP_REFERER']  # 获取网页访问来源
+            #         return render_to_response('prefect.html', {
+            #             'not_auth_error': '你还没有通过信息认证，请完善或者修改信息!',
+            #             'referer': referer,
+            #             'user': User.objects.get(username=request.COOKIES.get('name','')),
+            #         })
+            #     except:
+            #         return render_to_response('404.html', {
+            #             'error': request.session.get('not_auth_error', default=None)
+            #         })
+            cate_list =DCate.objects.all() if cate=="代办" else Cate.objects.all()
+            return render_to_response('post_service.html',{
+                 'user_name': request.COOKIES.get('name'),
+                  'cate': cate,
+                  'cate_list': cate_list,
+            })            
         else:
             request.session['error'] = "你还没有登录，请先登录！"
             try:
