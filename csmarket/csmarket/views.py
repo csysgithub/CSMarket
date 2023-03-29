@@ -10,7 +10,7 @@ def index(request):
         del request.session['error']
     except:
         pass
-    #SCU动态 = 2  博客= 1
+    #网站公告 = 2  博客= 1
     csm_list = News.objects.filter(new_cate=2).order_by("-new_time")[:5]
     ck_list = News.objects.filter(new_cate=1).order_by("-new_time")[:5]
 

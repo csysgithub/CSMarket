@@ -20,7 +20,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='dmessage',
             name='dmess_totalnum',
-            field=models.IntegerField(default=1, verbose_name='有效总次数'),
+            field=models.IntegerField(default=1, verbose_name='有效数'),
         ),
         migrations.AddField(
             model_name='message',
@@ -30,7 +30,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='message',
             name='mess_totalnum',
-            field=models.IntegerField(default=1, verbose_name='有效总次数'),
+            field=models.IntegerField(default=1, verbose_name='有效数'),
         ),
         migrations.AlterField(
             model_name='dmessage',

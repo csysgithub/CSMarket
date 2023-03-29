@@ -30,7 +30,7 @@ class News(models.Model):
 
     class Meta:
         db_table = "news_table"
-        verbose_name = u'SCU动态'
+        verbose_name = u'网站公告'
         verbose_name_plural = u'动态/创客素材管理'
 
 class Words(models.Model):

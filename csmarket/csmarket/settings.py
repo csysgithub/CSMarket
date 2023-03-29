@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'logre',     #登录注册
     'manager',   #用户审核管理
-    'news',     #博客，  SCU动态
+    'news',     #博客，  网站公告
     'message',  #代办中心，需求和服务类
     'cyanscikit', # csmarket自营
 ]

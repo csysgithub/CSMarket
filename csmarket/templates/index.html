@@ -19,21 +19,21 @@
     <div class="part_right">
         <div>
             <img src="/static/img/one.jpg">
-            <h3>SCU动态</h3>
+            <h3>网站公告</h3>
 {#            <p>关于发布，编辑，删除信息和其他内容</p>#}
-            <a href="/news/all/SCU动态/">立即查看</a>
+            <a href="/news/all/网站公告/">立即查看</a>
         </div>
         <div>
             <img src="/static/img/two.jpg">
-            <h3>请先进行个人身份验证</h3>
+            <h3>请先进行登入</h3>
 {#            <p>描述描述描述描述</p>#}
             <a href="/logre/personal/">个人中心</a>
         </div>
         <div>
             <img src="/static/img/three.jpg">
-            <h3>平台使用帮助中心</h3>
+            <h3>网站公告</h3>
 {#            <p>描述描述描述描述</p>#}
-            <a href="">立即查看</a>
+            <a href="/news/all/网站公告/">立即查看</a>
         </div>
     </div>
 </div>
@@ -47,8 +47,8 @@
         <li><a href="/message/postService/服务/">发布服务 |</a></li>
         <li><a href="/message/postService/需求/">发布需求 |</a></li>
         <li><a href="/message/postService/代办/">发布代办 |</a></li>
-        <li><a href="/news/all/SCU动态/">SCU动态 |</a></li>
-        <li><a href="/news/all/博客/">博客</a></li>
+        <li><a href="/news/all/网站公告/">网站公告 |</a></li>
+        <!-- <li><a href="/news/all/博客/">博客</a></li> -->
     </ul>
 </div>
 <div id="main">
@@ -112,6 +112,13 @@
         </div>
     </div>
     <div class="goodcsm">
+        <div>
+            <h4>
+                <span></span>
+            </h4>
+        </div>
+    </div>
+    <!-- <div class="goodcsm">
         <div class="mtitle">
             <h4>
                 <span>CSM精选推送</span>
@@ -119,7 +126,7 @@
         </div>
         <div class="csm-cantainer">
             <div class="market-cantainer">
-                <div class="csm-title"><h3>CS Market动态   &nbsp;&nbsp;<a href="/news/all/SCU动态/"> <span>更多<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></span></a></h3></div>
+                <div class="csm-title"><h3>CS Market动态   &nbsp;&nbsp;<a href="/news/all/网站公告/"> <span>更多<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></span></a></h3></div>
                 <ul class="csm-content">
                     {% for csm in csm_list %}
                     <li>
@@ -157,6 +164,6 @@
                 </ul>
             </div>
         </div>
-    </div>
+    </div> -->
 </div>
 {% endblock %}
