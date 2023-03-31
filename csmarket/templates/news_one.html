@@ -29,10 +29,10 @@
         <li><a href="/message/postService/代办/">发布代办 |</a></li>
         {% if csmdongtai %}
         <li class="now"><a href="/news/all/网站公告/">网站公告 |</a></li>
-        // <li><a href="/news/all/博客/">博客 </a></li>
+        <li><a href="/news/all/Q&A/">Q&A </a></li>
         {% elif chuangke %}
         <li><a href="/news/all/网站公告/">网站公告 |</a></li>
-        // <li class="now"><a href="/news/all/博客/">博客 </a></li>
+        <li class="now"><a href="/news/all/Q&A/">Q&A </a></li>
         {% endif %}
     </ul>
 </div>
@@ -52,7 +52,7 @@
         {% endautoescape %}
     </div><br>
     <div class="hot">
-        <h3><span>热门推荐:</span></h3><br>
+        <h3><span>其它Q&A:</span></h3><br>
         <ul>
             {% for hot in hot_list %}
             <li>浏览次数：{{ hot.new_seenum }}&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;

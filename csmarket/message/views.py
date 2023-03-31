@@ -7,22 +7,50 @@ import time
 from django.core.files.storage import FileSystemStorage
 from logre.models import User,UserSee
 from django.db.models import Q
+from django.http import HttpResponseBadRequest
 # Create your views here.
 
 #发布需求/服务
 @csrf_exempt
 def postService(request,cate):
+    # if request.method == 'POST':
+    #     title = request.POST.get('biaoti')
+    #     #保存图片，以url形式存储到数据库中
+    #     image = request.FILES["fengmian"]
+    #     fs = FileSystemStorage()
+    #     filename = fs.save("fengmian/"+image.name, image)
+    #     uploaded_file_url = fs.url(filename)
+
+    #     leibie = request.POST.get('leibie')
+    #     price = request.POST.get('baojia')
+    #     miaoshu = request.POST.get('miaoshu')
+
+
     if request.method == 'POST':
         title = request.POST.get('biaoti')
-        #保存图片，以url形式存储到数据库中
+        leibie = request.POST.get('leibie')
+        miaoshu = request.POST.get('miaoshu')
+
+        if not title:
+            return HttpResponseBadRequest('标题不能为空')
+        if not leibie:
+            return HttpResponseBadRequest('类别不能为空')
+        if not miaoshu:
+            return HttpResponseBadRequest('描述不能为空')
+
+        if 'fengmian' not in request.FILES:
+            return HttpResponseBadRequest('必须上传一张图片')
         image = request.FILES["fengmian"]
+        if not image:
+            return HttpResponseBadRequest('图片不能为空')
+
+        price = request.POST.get('baojia')
+        if not price:
+            price = 0
+        #保存图片，以url形式存储到数据库中
         fs = FileSystemStorage()
         filename = fs.save("fengmian/"+image.name, image)
         uploaded_file_url = fs.url(filename)
-
-        leibie = request.POST.get('leibie')
-        price = request.POST.get('baojia')
-        miaoshu = request.POST.get('miaoshu')
 
         # 这里要根据类别来定，因为服务/需求 是公用一个数据表， 而代办中心是一个单独的数据表
         if cate=="代办":
