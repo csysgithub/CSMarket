@@ -37,7 +37,7 @@
         <div class="ssv-top-left">
             <h1><span>标题：</span>{{ title }}</h1><br><br>
             <img src="{{ fengmian }}" alt="服务图片">
-            <div class="selfname"><span><b>联系人：</b>Csy</span></div>
+            <div class="selfname"><span><b>联系人：</b>{{ author }}</span></div>
             <div class="self">
                 <button id="clickself">点击查看联系方式</button>
                 <ul class="selfdesc">
@@ -57,11 +57,11 @@
                 <li>浏览次数：<span>{{ seenum }}</span></li>
                 <li>有效数：<span>{{ totalnum }}</span></li>
                 <li>成交量：<span>{{ compeletenum }}</span></li>
-                {% if tuo %}
+                <!-- {% if tuo %}
                 <li>托管方：<span>{{ tuo }}</span></li>
                 {% else %}
                 <li>最近托管方：<span>暂未托管</span></li>
-                {% endif %}
+                {% endif %} -->
                 <li>是否交易成功：<span>{{ iforno }}</span></li>
                 <li>代办or服务：<span>{{ cate }}</span></li>
                 {% if flag %}
